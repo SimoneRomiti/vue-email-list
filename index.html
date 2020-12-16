@@ -9,8 +9,8 @@
   <body>
 
     <div id="container">
-      <ul>
-        <li v-for="(item, index) in emailList">{{emailList[index]}}</li>
+      <ul v-if="emailList.length == 10">
+        <li v-for="(item, index) in emailList" :style="{background: colorArray[index]}">{{emailList[index]}}</li>
       </ul>
     </div>
 
